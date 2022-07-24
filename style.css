@@ -263,3 +263,184 @@ a.main{
     top:18px;
     z-index: -1;
 }
+.intro.mobile{
+    display: none;
+}
+@media screen and (max-width:1285px){
+    .column{
+        margin: 0 15px;
+    }
+    .secondRow{
+        justify-content:space-between;
+    }
+    .textCont{
+        padding:150px 50px 200px;
+    }
+    .textCont *{
+        max-width:400px;
+    }
+    .textCont p{
+        width:45%;
+    }
+    .card{
+        padding:15px 50px;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .card .title{
+        max-width:280px;
+    }
+    .firstSection .textCont .title{
+        max-width: 280px;
+        font-size: 2.5rem;
+    }
+    .intro.desktop{
+        right: 100px;
+    }
+}
+@media screen and (max-width:1050px){
+    header,.secondSection,footer{
+        padding-left:75px;
+        padding-right:75px;
+    }
+    footer{
+        margin-top: 0;
+        padding-top: 35px;
+    }
+}
+@media screen and (max-width:785px){
+    header{
+        padding: 20px;
+    }
+    header,.secondSection,footer{
+        padding-left:50px;
+        padding-right:50px;
+    }
+    .secondSection{
+        margin-top:50px;
+    }
+    .firstSection .textCont .title::after{
+        display: none;
+    }
+    .firstSection .textCont .title{
+        z-index: 3;
+    }
+    .textCont h1,.textCont p{
+        width: 100% !important;
+        max-width: unset !important;
+    }
+    .firstSection .textCont button{
+        position: relative;
+    }
+    .textCont{
+        text-align: center;
+        padding:100px 50px 100px;
+        position: relative;
+    }
+    .intro.desktop{
+        display: none;
+    }
+    .intro.mobile{
+        display: initial;
+        width: 100%;
+        height: auto;
+        z-index: 3;
+    }
+    .firstSection{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .intro-bg.left{
+        left:0;
+        top:56%;
+        background-image: url('images/bg-pattern-intro-left-mobile.svg');
+    }
+    .intro-bg.right{
+        top:unset;
+        bottom:-175px;
+        right:-75px;
+        background-image: url('images/bg-pattern-intro-right-mobile.svg');
+    }
+    .intro-bg{
+        width:300px;
+        height:400px;
+        z-index:1 ;
+    }
+    .features{
+        flex-direction: column;
+        align-items: center;
+    }
+    .secondSection{
+        text-align: center;
+        padding-top: 75px;
+    }
+    .secondSection .title::after{
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .feature{
+        width:100%;
+        max-width:500px;
+        text-align: center;
+        margin-bottom:35px;
+    }
+    .card{
+        flex-direction: column;
+        padding: 45px 15px 65px;
+        overflow: hidden;
+    }
+    .pattern{
+        background-image: url('images/bg-pattern-how-we-work-mobile.svg');
+        width:30%;
+        right: 0;
+        top: 0;
+    }
+    .footer-pattern{
+        background-image: url("images/bg-pattern-footer-mobile.svg");
+        height:225px;
+        width:100%;
+        background-size: contain;
+        position: absolute;
+        left: 0;
+        top:-35px;
+        z-index: -1;
+    }
+    nav{
+        display: none;
+    }
+}
+@media screen and (max-width:595px){
+    header,.secondSection,footer{
+        padding-left:25px;
+        padding-right:25px;
+    }
+    .firstRow,.secondRow{
+        flex-direction: column;
+        gap: 20px 0;
+        align-items: center;
+    }
+    .column{
+        align-items: center;
+        margin-top:30px;
+    }
+    .column:first-child{
+        margin-top:15px;
+    }
+    a.main{
+        margin-bottom: 20px;
+    }
+    .intro-bg.left{
+        top:45%;
+    }
+}
+@media screen and (max-width:415px){
+    .intro-bg.left{
+        top:35%;
+    }
+    .intro-bg.right{
+        bottom:-250px;
+        right:-85px;
+    }
+}
