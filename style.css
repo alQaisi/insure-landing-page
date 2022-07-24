@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden
+}
+*{
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Karla', sans-serif;
+}
+body{
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+header{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding:15px 175px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+header .logo{
+    margin-right: auto;
+}
+a{
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: .85rem;
+    color: hsl(270, 9%, 17%);
+}
+a:hover{
+    text-decoration: underline;
+}
+nav a,a.main{
+    color: hsl(273, 4%, 51%);
+    margin: 0 15px;
+}
+nav a:hover,a.main:hover{
+    color:hsl(256, 26%, 20%);
+    text-decoration: none;
+}
+a,button{
+    text-transform: uppercase;
+}
+header button{
+    margin-left: 15px;
+
+}
+button{
+    font-weight: 700;
+    letter-spacing: 2px;
+    background-color: white;
+    outline: none;
+    border: 2px solid hsl(256, 26%, 20%);
+    color: hsl(256, 26%, 20%);
+    cursor: pointer;
+    padding: 10px 22px;
+    transition: background-color .25s ease-in-out;
+}
+button:hover{
+    color: white;
+    background-color: hsl(256, 26%, 20%);
+}
+button.transparent{
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+button.transparent:hover{
+    background-color: white;
+    color: hsl(256, 26%, 20%);
+}
+.firstSection {
+    color: hsl(0, 0%, 98%);
+}
+.textCont{
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding:150px 150px 200px;
+    background-color: hsl(256, 26%, 20%);
+}
+.textCont *{
+    max-width:485px;
+}
+.firstSection .textCont .title{
+    margin-block: 0;
+    font-size: 3rem;
+    max-width: 350px;
+    line-height:45px;
+}
+.title,.feature h2{
+    font-family: 'DM Serif Display', serif;
+    position: relative;
+    font-size: 3rem;
+    font-weight: 400;
+}
+.title::after{
+    position: absolute;
+    display: block;
+    content: "";
+    width: 110px;
+    height:1px;
+    background-color: hsl(0, 0%, 98%);
+    top:-40px;
+    opacity: .5;
+}
+.title.dark{
+    color: hsl(270, 9%, 17%);
+}
+.title.dark::after{
+    background-color: hsl(270, 9%, 17%);
+}
+.firstSection .textCont .text{
+    color: hsl(0, 0%, 90%);
+    font-weight: 400;
+    line-height: 25px;
+    font-size: .9rem;
+    margin-top:25px;
+}
+.firstSection .textCont button{
+    font-size: .75rem;
+    margin-top:15px;
+    z-index:3;
+    position: absolute;
+}
+.intro.desktop{
+    position: absolute;
+    z-index: 2;
+    right: 175px;
+    top:150px;
+    width:37%;
+    height: auto;
+}
+.intro-bg,.pattern,.footer-pattern{
+    position:absolute;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.intro-bg{
+    width:475px;
+    height:550px;
+    z-index: 3;
+}
+.intro-bg.left{
+    left:-140px;
+    top:425px;
+    background-image: url('images/bg-pattern-intro-left-desktop.svg');
+}
+.intro-bg.right{
+    top:25px;
+    right:-35px;
+    background-image: url('images/bg-pattern-intro-right-desktop.svg');
+}
+.secondSection{
+    margin-top:175px;
+    padding:100px 175px 75px;
+}
+.features{
+    margin:100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.feature h2{
+    color: hsl(270, 9%, 17%);
+    font-size:1.5rem;
+}
+.feature{
+    width: 31%;
+}
+.feature p{
+    font-size:.95rem;
+    color: hsl(273, 4%, 51%);
+    line-height: 23px;
+}
+.card{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: hsl(256, 26%, 20%);
+    color: hsl(0, 0%, 98%);
+    padding:15px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.card .title{
+    max-width:425px;
+}
+.card .title::after{
+    display: none;
+}
+.card button{
+    z-index: 10;
+}
+.pattern{
+    background-image: url('images/bg-pattern-how-we-work-desktop.svg');
+    height: 100%;
+    width: 500px;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+}
+.social svg{
+    cursor: pointer;
+    margin: 7px;
+}
+.social svg:hover path{
+    fill: hsl(270, 9%, 17%);
+}
+footer{
+    box-sizing: border-box;
+    margin-top: 75px;
+    padding: 75px 175px 50px;
+    position: relative;
+}
+.firstRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+hr{
+    margin-top: 25px;
+    background: hsla(270, 9%, 17%, 0.548);
+}
+.secondRow{
+    margin-top:35px;
+    display: flex;
+    align-items: flex-start;
+    justify-content:flex-start;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 20px 0;
+    margin: 0 75px;
+}
+.one{
+    margin-left: 0;
+}
+a.main{
+    margin:0 0 35px;
+}
+.footer-pattern{
+    background-image: url('images/bg-pattern-footer-desktop.svg');
+    height:225px;
+    width:515px;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top:18px;
+    z-index: -1;
+}
