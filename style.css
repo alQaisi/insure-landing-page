@@ -27,6 +27,55 @@ header{
     top: 0;
     z-index: 100;
 }
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: hsl(270, 9%, 17%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+    gap: 25px 0;
+    animation-name: initialMove;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    overflow-y:auto;
+}
+.overlay.hidden{
+    display: none;
+}
+.overlay.hide{
+    animation-name:lastMove;
+}
+@keyframes initialMove {
+    from {opacity:0;}
+    to {opacity: 1;}
+}
+@keyframes lastMove {
+    from {
+        opacity:1;
+        z-index: 95;
+    }
+    to {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+.overlay *{
+    width: 90%;
+    max-width:350px;
+}
+.overlay h2{
+    margin-top: 50px;
+    visibility: hidden;
+}
+.overlay a{
+    color:white;
+}
 header .logo{
     margin-right: auto;
 }
@@ -266,6 +315,9 @@ a.main{
 .intro.mobile{
     display: none;
 }
+.menuIcon{
+    display: none;
+}
 @media screen and (max-width:1285px){
     .column{
         margin: 0 15px;
@@ -409,6 +461,13 @@ a.main{
     }
     nav{
         display: none;
+    }
+    .menuIcon{
+        display: initial;
+        cursor: pointer;
+    }
+    .menuIcon:hover{
+        filter:brightness(.75);
     }
 }
 @media screen and (max-width:595px){
